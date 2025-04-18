@@ -1,0 +1,11 @@
+  .navbar {
+    border-bottom: 2px solid #f0f0f0
+  }
+
+  .logo-container{
+    border-right: 4px solid #ffc107;
+  }
+
+  .login-btn-container{
+    border-right: 4px solid #c0c0c0;
+  }

@@ -1,0 +1,28 @@
+.form-container{
+    max-width: 400px;
+    width: 100%;
+}
+
+.btn{
+margin-top: 15px;
+}
+
+.offer-container{
+    display : flex;
+    justify-content: space-between;
+}
+
+.term-of-service{
+  font-size:12px;
+
+}
+
+/* .text-primary{
+  font-weight: 500;
+  font-size: 15px;
+} */
+/* @media (min-width: 768px) {
+    .form-container {
+      max-width: 500px;
+    }
+  } */
