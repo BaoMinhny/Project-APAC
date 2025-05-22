@@ -18,7 +18,8 @@ const Register = () => {
     
    function handleInput(event){
         const { name, value } = event.target;
-
+        
+        console.log(name)
         setFormValues((prev) => ({
             ...prev,
             [name]: value
@@ -86,7 +87,7 @@ const Register = () => {
                         type="email"
                         name="email" 
                         placeholder='Email Address' 
-                        className='form-control'
+                        className={`form-control ${errors.email ? 'is-invalid' : ''}`}
                         value={formValues.email}
                         onChange={handleInput} />
                         {errors.email && <p style={{color: "red"}}>{errors.email}</p>}
@@ -97,7 +98,7 @@ const Register = () => {
                         type="password" 
                         name="password"
                         placeholder='Enter your password' 
-                        className='form-control'
+                        className={`form-control ${errors.password ? 'is-invalid' : ''}`}
                         value={formValues.password}
                         onChange={handleInput}
                         />
@@ -105,7 +106,7 @@ const Register = () => {
                     </div>             
                
                   {/* form check */}  
-                    <div class="form-check m-2">
+                    <div className="form-check m-2">
                         <input class="form-check-input" type="checkbox" value="" id="check"/>
                         <label class="form-check-label m-0" for="flexCheckDefault">
                         keep me login in this device

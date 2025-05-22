@@ -1,12 +1,18 @@
 export const checkEmailExists = async (email) => {
   try {
-    const res = await fetch(`http://localhost:3000/users?email=${encodeURIComponent(email)}`); // Fake Api 
+    const res = await fetch(`http://localhost:3001/users?email=${encodeURIComponent(email)}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
 
     if (!res.ok) {
       throw new Error("Server error");
     }
 
     const data = await res.json();
+    console.log(data);
 
     if (Array.isArray(data) && data.length > 0) {
       return true;  

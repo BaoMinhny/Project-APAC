@@ -10,7 +10,7 @@ export default function Validation(values) {
     }
 
     // Kiểm tra email
-    if (!values.email) {
+    if (!values.email)  {
         errors.email = "Please enter a valid email address!";
     } else if (!email_pattern.test(values.email)) {
         errors.email = "Email didn't match the required pattern!";

@@ -1,10 +1,23 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import "../login/login.css"
 import SocialButton from '../../components/socialButton/SocialButton';
+import { useLocation } from 'react-router-dom';
+import toast, { Toaster } from 'react-hot-toast';
 
 const Login = () => {
+  const location = useLocation();
+    
+  useEffect(() => {
+    if(location.state?.toastMessage){
+       console.log("location.state", location.state);
+      toast.success(location.state.toastMessage);
+        window.history.replaceState({}, document.title, window.location.pathname + window.location.search);
+    }
+  }, [location.state])
+
   return (
     <div className='login-container template d-flex justify-content-center align-items-center vh-100 bg-white'>
+      <Toaster position="top-center" reverseOrder={false} />
       <div className='form-container p-4 md-5 rounded bg-white border border-secondary'>
             <form>
             <h3 className='text-center'>Login</h3>

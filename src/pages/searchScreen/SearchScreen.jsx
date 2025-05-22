@@ -1,7 +1,5 @@
 import React from 'react'
-import Header from '../../components/header/header'
 import "./SearchScreen.css"
-import Footer from '../../components/footer/footer'
 import SearchInput from '../../components/searchInput/SearchInput';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
@@ -10,7 +8,6 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 const SearchScreen = () => {
   return (
     <div className='search-container min-vh-100 d-flex flex-column'>
-      <Header/>
           {/* Main Content */}
           <div className="main-content text-center p-5 flex-grow-1">
             {/* Search Section */}
@@ -36,8 +33,6 @@ const SearchScreen = () => {
               </div>
                 <hr/>
                 </div>
-                {/* footer */}
-              <Footer/>
     </div>
   )
 }
